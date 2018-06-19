@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="102dp"
+        android:onClick="addClick"
+        android:text="add" />
+
+    <Button
+        android:id="@+id/subtractButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/addButton"
+        android:layout_toEndOf="@+id/addButton"
+        android:onClick="subtractClick"
+        android:text="subtract" />
+
+    <Button
+        android:id="@+id/multiplyButton"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/addButton"
+        android:layout_toStartOf="@+id/divideButton"
+        android:onClick="multiplyClick"
+        android:text="multiply"
+        tools:ignore="RtlCompat" />
+
+    <Button
+        android:id="@+id/divideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/addButton"
+        android:onClick="divideClick"
+        android:text="divide"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/number1"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/number1"
+        android:layout_marginTop="170dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="364dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/addButton"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="first number"
+        android:inputType="textPersonName"
+        android:layout_alignLeft="@+id/addButton" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addButton"
+        android:layout_alignStart="@+id/addButton"
+        android:layout_marginBottom="-102dp"
+        android:ems="10"
+        android:hint="second number"
+        android:inputType="textPersonName"
+        android:layout_alignLeft="@+id/addButton" />
+</RelativeLayout>
